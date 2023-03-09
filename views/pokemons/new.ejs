@@ -1,0 +1,59 @@
+<%- include("../partials/header") %>
+<br><br><br>
+<h1>Add a Pokemon:</h1>
+<br><br><br>
+    <form id="new-pokemon" action="/pokemons" method="POST">
+      <label>Name:
+        <select id="pokemon-select" name="pokemonName" onchange="setPokemonNum(this.options[this.selectedIndex].id)">
+            <% pokemons.forEach((p, idx) => { %>
+                <option id ="<%=idx+1%>" value="<%=p.name%>"> <%=idx +1%>. <%=p.name%></option> 
+            <% }) %>
+        </select>
+      <input id="pokemon-num" type="hidden" name="pokemonNum" value="1">
+      </label>
+      <label>Special Ability:
+      <input type = "string" name="specialAbility">
+      <label>Date Caught:
+        <input type = "date" name = "dateCaught">
+      </label>
+      <br><br><br>
+      <label>Gender:
+        <select name="gender">
+        <option value ="Male">Male</option>
+        <option value ="Female">Female</option>
+        <option value ="Unknown">Unknown</option>
+        </select>
+        </label>
+      <label>height (m):
+        <input type = "number" name = "height" min="0" max="9999">
+      </label>
+      <label>weight (lbs):
+      <input type = "number" name = "weight" min="0" max="9999">
+      </label>
+      <br><br><br>
+      <label>Shiny:
+         <select name="isShiny">
+            <option value ="false">No</option>
+            <option value ="true">Yes</option>
+         </select>
+     </label>
+
+    <label>Pokemon Type(s): 
+        <select id="select-type" name ="pokemonTypes">
+            <% pokemonTypes.forEach(typeCombo => { %>
+                <% if (typeCombo.type1 === typeCombo.type2) { %>
+                    <option value="<%=typeCombo.id%>"><%=typeCombo.type1%> </option>
+                <% } else { %>
+                <option value="<%=typeCombo.id%>"><%=typeCombo.type1%>, <%=typeCombo.type2%></option>
+                <% } %>
+            <% }) %>
+        </select>
+    </label>
+    <label>Description:
+        <input id="desc-box" type = "string" name = "description" autocomplete= "off">
+    </label>
+    <br><br><br>
+      <input id = "submit-btn" type = "submit" value="Add Pokemon">
+    </form>
+    <a id="cancel-btn" href ="/pokemons/<%=pokemons._id%>">Cancel</a>
+<%- include("../partials/footer") %>

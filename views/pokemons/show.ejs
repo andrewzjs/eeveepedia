@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+<br><br>
+<h1>Pokemon Data</h1>
+<br>
+<div class="show-container">
+<h2 class="show-name"><%=pokemons.pokemonName%></h2>
+
+<img class="show-sprites" src ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%=pokemons.pokemonNum%>.png">
+
+<h2 class="show-date-caught">Date Caught: <%=pokemons.dateCaught%></h2>
+<h2 class="show-height">
+    Height(m): <%=pokemons.height%>
+    <br><br><br><br><br><br>
+    Weight(kg): <%=pokemons.weight%>
+</h2>
+<h2 class="show-type">Type:
+    <% if (pokemons.pokemonTypes.type1 === pokemons.pokemonTypes.type2) { %>
+        <%=pokemons.pokemonTypes.type1%>
+    <% } else { %>
+        <%=pokemons.pokemonTypes.type1%> &
+        <%=pokemons.pokemonTypes.type2%>
+    <% } %>
+    <br><br><br><br><br><br>
+    Shiny: <%=pokemons.isShiny%>
+</h2>
+<h2 class="show-ability">
+    Ability: <%=pokemons.specialAbility%>
+    <br><br><br><br><br><br>
+    Gender: <%=pokemons.gender%>
+</h2>
+<h2 class="show-description"><%=pokemons.description%></h2>
+</div>
+<br>
+<form action="/pokemons/<%=pokemons._id%>?_method=DELETE" method="POST" class= "delete-form">
+    <a id="edit-btn" href ="/pokemons/<%=pokemons._id%>/edit">Edit Entry</a>
+    <input id = "btn-delete" type = "submit" value="Delete Entry">
+    <a id="cancel-btn" href ="/pokemons">Cancel</a>
+</form>
+<%- include("../partials/footer") %>

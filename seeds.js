@@ -1,3 +1,4 @@
+require("dotenv").config()
 require('./config/database')
 const Pokemon = require('./models/pokemon');
 const PokemonType = require('./models/pokemonType');

@@ -25,8 +25,10 @@ async function index(req, res) {
 async function newPokemon(req, res) {
     try {
         const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1280&offset=0")
+        console.log(response.data)
         console.log(Object.values(response.data)[1])
         const pokemonTypes = await PokemonType.find({})
+        console.log(pokemonTypes)
         res.render("pokemons/new", {title: "EeveePedia", pokemonTypes, pokemons: response.data.results})
 
     } catch(err) {

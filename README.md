@@ -1,7 +1,7 @@
 # EeveePedia (Pokedex)
 
 ## Game Description
-EeveePedia is a website where users can create their own Pokedex entries. Unlike a traditional Pokedex, users can add, update, and delete their own Pokedex entries as they see fit.
+EeveePedia is a web application where users can create their own Pokedex entries. Unlike a traditional Pokedex, users can add, update, and delete their own Pokedex entries as they see fit.
 
 ## Screenshots
  ![Landing Page](/screenshots/landingpage.PNG?raw=true)

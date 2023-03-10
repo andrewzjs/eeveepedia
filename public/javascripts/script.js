@@ -8,5 +8,3 @@ function setPokemonNum(num){
 
 
 
-// pokemonIdxNum.onchange = setPokemonNum
-

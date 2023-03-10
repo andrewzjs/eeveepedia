@@ -49,8 +49,13 @@ async function show(req, res) {
 async function create(req, res) {
     // https://git.generalassemb.ly/andrewzjs/sei-59/blob/main/w05/d2/mongoose-referencing/instructor/mongoose-movies/controllers/performers.js
     // from sei-59/w05/d2 lesson: (to fix display date)
-    // const d = req.body.dateCaught;
-    // req.body.dateCaught = `${d.substr(5, 2)}-${d.substr(8, 2)}-${d.substr(0, 4)}`;
+
+    if (req.body.dateCaught !== "") {
+        const d = req.body.dateCaught;
+        console.log(req.body, "first d")
+        req.body.dateCaught = `${d.substr(5, 2)}-${d.substr(8, 2)}-${d.substr(0, 4)}`;
+    } 
+    
     try {
 
         for (let key in req.body) {

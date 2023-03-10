@@ -33,7 +33,7 @@ const pokemonsSchema = new Schema({
         default: "N/A"
     }, dateCaught: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     }, gender: {
         type: String,
     }, isShiny: {

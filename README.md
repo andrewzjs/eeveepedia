@@ -10,12 +10,13 @@ EeveePedia is a website where users can create their own Pokedex entries. Unlike
 
 ## Technologies Used
 1. JavaScript
-2. Express.js
-3. Node.js
-4. pokeAPI
-5. Axios
-6. CSS
-7. EJS
+2. MongoDB
+3. Express.js
+4. Node.js
+5. pokeAPI
+6. Axios
+7. CSS
+8. EJS
 
 ## Getting Started
 EeveePedia is available to access [here](https://eeveepedia.herokuapp.com) (deployed via Heroku).

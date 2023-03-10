@@ -25,6 +25,7 @@ EeveePedia is available to access [here](https://eeveepedia.herokuapp.com) (depl
 ## Icebox 
 1. Add a "moves" and "weaknesses" section.
 2. Add Google oAuth.
+3. Implement Bootstrap. 
 
 
 ## Attributions

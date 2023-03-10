@@ -18,12 +18,13 @@ EeveePedia is a website where users can create their own Pokedex entries. Unlike
 7. EJS
 
 ## Getting Started
+EeveePedia is available to access [here](https://eeveepedia.herokuapp.com/pokemons) (deployed via Heroku).
 
 
 
 ## Icebox 
 1. Add a "moves" and "weaknesses" section.
-2. Add Google oAuth
+2. Add Google oAuth.
 
 
 ## Attributions
